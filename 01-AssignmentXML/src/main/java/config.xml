@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="employee" class="com.dsaghicha.model.Employee">
+		<property name="employeeID" value="E001"/>
+		<property name="employeeName" value="Darshaan Aghicha"/>
+		<property name="employeeSalary" value="80000.50"/>
+		<property name="employeeEmail" value="e001@dsaghicha.com"/>
+		<property name="employeeDoJ" value="2020-05-08"/>
+		<property name="employeeDept" ref="dept"/>
+	</bean>
+	
+	<bean id="dept" class="com.dsaghicha.model.Department">
+		<constructor-arg name="deptID" value="D001"/>
+		<constructor-arg name="deptName" value="IT"/>
+	</bean>
+</beans>
